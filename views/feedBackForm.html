@@ -1,0 +1,54 @@
+{%extends 'main.html'%}
+
+{%block head%}
+{{parent()}}
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<title>Обратная связь</title>
+{%endblock%}
+
+{%block form%}
+<form method="post" action="../index.php?ctrl=FeedBackCtrl">
+
+    <input type="hidden" name="token" value="{{token}}"/>
+
+    <fieldsset>
+        <legend class="text-center">Обратная связь</legend>
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Ведите ваше имя"/>
+            <span class="help-inline">{{error.name}}</span>
+        </div>
+        <div class="form-group">
+            <label for="email">Почта</label>
+            <input class="form-control" type="text" name="email" id="email" placeholder="Введите ваш e-mail"/>
+            <span class="help-inline">{{error.email}}</span>
+        </div>
+        <div class="form-group">
+            <label for="text">Сообщение</label>
+            <textarea class="form-control" name="text" id="text" rows="5" placeholder="Введите текст вашего сообщения"></textarea>
+            <span class="help-inline">{{error.text}}</span>
+        </div>
+        <div class="form-group">
+            <div class="g-recaptcha" data-sitekey="6LcTpA4TAAAAAKQ4vOnuy69PDGzhexNhJu0DIuz8"></div>
+        </div>
+
+        <!--           <div class="form-group">
+                            <noscript style="">
+
+                                    <span>Введите два числа и их сумму: </span><br>
+                                    <input type="text" name="x" size="8"/> +
+                                    <input type="text" name="y" size="8"/> =
+                                    <input type="text" name="res" size="8"/>
+                            </noscript>
+                        </div>
+        -->
+        <div class="form-group">
+            <div class="col-md-offset-8">
+                <button type="submit" class="btn btn-primary" name="submit">Отправить</button>
+            </div>
+        </div>
+    </fieldsset>
+    <div>{{error.msg}}</div>
+</form>
+{%endblock%}

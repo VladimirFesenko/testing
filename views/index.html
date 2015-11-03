@@ -1,0 +1,24 @@
+{%extends 'main.html'%}
+
+{%block head%}
+{{parent()}}
+<title>Главная</title>
+{%endblock%}
+
+{%block content%}
+<p>
+    <a href="index.php?ctrl=RegistrationCtrl"><b>Страница No.1</b> - форма регистрации</a>
+</p>
+<p>
+    <a href="index.php?ctrl=ShowWeatherCtrl"><b>Страница No.2</b> - погода на сегодня по Запорожью, которая
+        парсится </a>-
+    <b><a href="http://www.gismeteo.ua/city/daily/5093/"> по этой ссылке</a></b>
+</p>
+<p>
+    <a href="index.php?ctrl=FeedBackCtrl"><b>Страница No.3</b>  - форма обратной связи.</a>
+</p>
+<p>
+    <a href="index.php?ctrl=ShowFeedBackCtrl"><b>Страница No.4</b> - список фидбеков, которые добавляются на
+        странице <b>No.3.</b></a>
+</p>
+{%endblock%}

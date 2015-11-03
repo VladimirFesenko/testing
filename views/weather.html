@@ -1,0 +1,43 @@
+{%extends 'main.html'%}
+
+{%block head%}
+{{parent()}}
+<title>Погода</title>
+{%endblock%}
+
+{%block content%}
+<h2>Погода</h2>
+<table class="table table-striped table-hover">
+    <tr>
+        <td>Дата:</td><td>{{day}} {{month}} {{year}}г.</td>
+    </tr>
+    <tr>
+        <td>Страна:</td><td>{{country}}</td>
+    </tr>
+    <tr>
+        <td>Регион:</td><td>{{region}}</td>
+    </tr>
+    <tr>
+        <td>Город:</td><td>{{city}}</td>
+    </tr>
+
+    <tr>
+        <td>Температура:</td><td>{{temp}}</td>
+    </tr>
+    <tr>
+        <td>Направление:</td><td>{{wind_direction}}</td>
+    </tr>
+    <tr>
+        <td>Сила ветра:</td><td>{{wind_power}}</td>
+    </tr>
+    <tr>
+        <td>Давление:</td><td>{{press}}</td>
+    </tr>
+    <tr>
+        <td>Влажность:</td><td>{{humidity}}</td>
+    </tr>
+    <tr>
+        <td>Температура воды:</td><td>{{water_temp}}</td>
+    </tr>
+</table>
+{%endblock%}

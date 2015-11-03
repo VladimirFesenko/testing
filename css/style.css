@@ -1,0 +1,21 @@
+.form-horizontal{
+    border: 1px solid #E6E6E6;
+    border-radius: 5%;
+    width: 400px;
+    padding: 20px;
+    margin: 40px auto;
+}
+textarea{
+    resize: none;
+}
+form{
+    border: 1px solid #E6E6E6;
+    border-radius: 5%;
+    width: 345px;
+    padding: 20px;
+    margin: 40px auto;
+}
+body{
+    padding: 20px;
+}
+
